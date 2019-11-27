@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 25 - Complex Data - JavaScript Explained</title>
+  </head>
+  <body>
+    <h1>Complex Data Exercises</h1>
+    <p>Open the web inspector console to test.</p>
+  </body>
+  <script>
+    const posts = [
+      {
+        id: 1,
+        title: `Welcome to JS`,
+        cats: [`js`, `intro`],
+        url : "same.com",
+        excerpt: "dublin"
+      },
+      {
+        id: 2,
+        title: `Using a Code Editor`,
+        cats: [`tools`, `intro`],
+        url : "nri.com",
+        excerpt : "anglie"
+      },
+      {
+        id: 3,
+        title: `JavaScript Arrays`,
+        cats: [`js`],
+        url : "nsa.com",
+        excerpt : "hello boss"
+      },
+      {
+        id: 4,
+        title: `More JS Practice`,
+        cats: [`js`, `practice`],
+        url : "bab.com",
+        excerpt :"omo nla"
+      }
+    ];
+    function getpostmarkup (posts){
+      return posts.map(post => {return `<div class="posts">
+      <article class="post-${post.id}><h2> ${post.title}</h2> <p>${post.excerpt}</p></article></div>`})
+    }
+    console.log(getpostmarkup(posts))
+  </script>
+  </script>
+</html>

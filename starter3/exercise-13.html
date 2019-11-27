@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 13 - Complex Data - JavaScript Explained</title>
+  </head>
+  <body>
+    <h1>Complex Data Exercises</h1>
+    <p>Open the web inspector console to test.</p>
+  </body>
+  <script>
+    
+    // Place your code below this line, before the closing script tag
+    getmessagemarkup = (type) => {
+      const message = {
+      notice: `This is a notice.`,
+      error: `An error occured!`,
+      success: `Success!`
+    };
+    if (type === "notice"){
+      return `<div class=message ${type}> ${message.notice} </div>`
+      }
+      else if( type === 'error'){
+        return `<div class=message ${type}> ${message.error} </div>`
+      }
+      else{
+        return `<div class=message ${type}> ${message.success} </div>`
+      }
+    
+    }
+
+    console.log(getmessagemarkup(`error`))
+  </script>
+</html>
